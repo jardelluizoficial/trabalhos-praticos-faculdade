@@ -37,6 +37,32 @@ Gateway e DNS não foram necessários para esse teste, pois a comunicação ocor
 4. No PC0, abri o Command Prompt e executei `ping 192.168.1.2`.
 5. Conferi as respostas e registrei as configurações e o resultado em capturas de tela.
 
+## Imagens do laboratório
+
+### 1. Topologia da rede
+
+Dois computadores conectados ao switch por cabos Ethernet, formando uma topologia em estrela.
+
+![Topologia com PC0, PC1 e switch](imagens/01-topologia.png)
+
+### 2. Configuração do PC0
+
+Endereço IPv4: 192.168.1.1. Máscara: 255.255.255.0.
+
+![Configuração IPv4 do PC0](imagens/02-ip-pc0.png)
+
+### 3. Configuração do PC1
+
+Endereço IPv4: 192.168.1.2. Máscara: 255.255.255.0.
+
+![Configuração IPv4 do PC1](imagens/03-ip-pc1.png)
+
+### 4. Teste de comunicação
+
+No PC0, executei `ping 192.168.1.2`. Os quatro pacotes enviados receberam resposta, sem perdas.
+
+![Resultado do ping do PC0 para o PC1](imagens/04-ping-pc0-para-pc1.png)
+
 ## Resultado do teste
 
 | Indicador | Resultado |
