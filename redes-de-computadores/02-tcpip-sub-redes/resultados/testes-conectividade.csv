@@ -1,0 +1,17 @@
+id,origem,ip_origem,destino,ip_destino,tipo,comando,enviados,recebidos,perdidos,perda_percentual,data_execucao,tentativa,evidencia,observacoes
+T01,PC0,192.168.1.2,Router0,192.168.1.1,gateway,ping 192.168.1.1,4,4,0,0%,2026-10-20,execucao registrada,../imagens/10-pc0-testes-conectividade.png,
+T02,PC0,192.168.1.2,PC1,192.168.1.3,mesma-sub-rede,ping 192.168.1.3,4,4,0,0%,2026-10-20,execucao registrada,../imagens/10-pc0-testes-conectividade.png,
+T03,PC0,192.168.1.2,PC2,192.168.2.2,outra-sub-rede,ping 192.168.2.2,4,4,0,0%,2026-10-20,repeticao,../imagens/10-pc0-testes-conectividade-b.png,"Primeira tentativa: 3 respostas de 4, 25% de perda; repeticao registrada: 4 de 4, 0%."
+T04,PC0,192.168.1.2,PC3,192.168.2.3,outra-sub-rede,ping 192.168.2.3,4,4,0,0%,2026-10-20,repeticao,../imagens/10-pc0-testes-conectividade-b.png,"Primeira tentativa: 3 respostas de 4, 25% de perda; repeticao registrada: 4 de 4, 0%."
+T05,PC1,192.168.1.3,Router0,192.168.1.1,gateway,ping 192.168.1.1,4,4,0,0%,2026-10-20,execucao registrada,../imagens/11-pc1-testes-conectividade.png,
+T06,PC1,192.168.1.3,PC0,192.168.1.2,mesma-sub-rede,ping 192.168.1.2,4,4,0,0%,2026-10-20,execucao registrada,../imagens/11-pc1-testes-conectividade.png,
+T07,PC1,192.168.1.3,PC2,192.168.2.2,outra-sub-rede,ping 192.168.2.2,4,4,0,0%,2026-10-20,execucao registrada,../imagens/11-pc1-testes-conectividade.png,
+T08,PC1,192.168.1.3,PC3,192.168.2.3,outra-sub-rede,ping 192.168.2.3,4,4,0,0%,2026-10-20,execucao registrada,../imagens/11-pc1-testes-conectividade.png,
+T09,PC2,192.168.2.2,Router0,192.168.2.1,gateway,ping 192.168.2.1,4,4,0,0%,2026-10-20,execucao registrada,../imagens/12-pc2-testes-conectividade.png,
+T10,PC2,192.168.2.2,PC3,192.168.2.3,mesma-sub-rede,ping 192.168.2.3,4,4,0,0%,2026-10-20,execucao registrada,../imagens/12-pc2-testes-conectividade.png,
+T11,PC2,192.168.2.2,PC0,192.168.1.2,outra-sub-rede,ping 192.168.1.2,4,4,0,0%,2026-10-20,execucao registrada,../imagens/12-pc2-testes-conectividade.png,
+T12,PC2,192.168.2.2,PC1,192.168.1.3,outra-sub-rede,ping 192.168.1.3,4,4,0,0%,2026-10-20,execucao registrada,../imagens/12-pc2-testes-conectividade.png,
+T13,PC3,192.168.2.3,Router0,192.168.2.1,gateway,ping 192.168.2.1,4,4,0,0%,2026-10-20,execucao registrada,../imagens/13-pc3-testes-conectividade.png,
+T14,PC3,192.168.2.3,PC2,192.168.2.2,mesma-sub-rede,ping 192.168.2.2,4,4,0,0%,2026-10-20,execucao registrada,../imagens/13-pc3-testes-conectividade.png,
+T15,PC3,192.168.2.3,PC0,192.168.1.2,outra-sub-rede,ping 192.168.1.2,4,4,0,0%,2026-10-20,execucao registrada,../imagens/13-pc3-testes-conectividade.png,
+T16,PC3,192.168.2.3,PC1,192.168.1.3,outra-sub-rede,ping 192.168.1.3,4,4,0,0%,2026-10-20,execucao registrada,../imagens/13-pc3-testes-conectividade.png,
