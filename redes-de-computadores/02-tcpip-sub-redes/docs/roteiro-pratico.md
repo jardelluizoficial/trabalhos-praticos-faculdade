@@ -1,5 +1,7 @@
 # Roteiro prático de montagem e configuração
 
+[← Laboratório de duas sub-redes](../README.md) · [Todos os trabalhos](../../../README.md) · [Perfil](https://github.com/jardelluizoficial)
+
 Executar uma etapa por vez, conferindo o resultado antes de avançar. Todos os comandos a seguir pertencem aos dispositivos simulados no Packet Tracer. O guia apresenta a sequência completa para consulta durante o acompanhamento.
 
 ## E01 Inserir dispositivos e salvar
@@ -166,3 +168,7 @@ Seguir o [estudo de incidente](incidente-gateway.md). Começar somente depois da
 ## E09 e E10 Concluir as entregas
 
 Preencher o relatório acadêmico com os resultados observados e revisar todas as exigências do enunciado. No GitHub, atualizar o README, registrar a versão usada, conferir os links das evidências e incluir apenas os extras efetivamente executados. Comparar os novos resultados com as evidências desta execução.
+
+---
+
+[← Voltar ao laboratório](../README.md) · [Evidências](evidencias.md) · [Roteiro](roteiro-pratico.md) · [Incidente](incidente-gateway.md)

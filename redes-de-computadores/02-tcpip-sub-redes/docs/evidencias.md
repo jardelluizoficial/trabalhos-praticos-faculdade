@@ -1,5 +1,7 @@
 # Índice das evidências
 
+[← Laboratório de duas sub-redes](../README.md) · [Todos os trabalhos](../../../README.md) · [Perfil](https://github.com/jardelluizoficial)
+
 Capturas reais da montagem, configuração, testes e diagnóstico. Os arquivos originais foram preservados; o histórico de falhas e repetições permanece visível nas capturas.
 
 | Captura | Evidência |
@@ -28,3 +30,7 @@ Capturas reais da montagem, configuração, testes e diagnóstico. Os arquivos o
 A configuração do roteador está visível na captura 04; não foi necessário um arquivo 03 separado. Para PC0, a captura 10 inicial registra as primeiras tentativas e a captura 10-b comprova a repetição sem perdas para os destinos remotos.
 
 Na captura 15, o ARP registrado é broadcast e tem 192.168.1.2 como IP de origem e IP alvo. Na captura 16, o pedido ICMP de PC0 para PC2 é encaminhado entre as duas interfaces do roteador.
+
+---
+
+[← Voltar ao laboratório](../README.md) · [Evidências](evidencias.md) · [Roteiro](roteiro-pratico.md) · [Incidente](incidente-gateway.md)

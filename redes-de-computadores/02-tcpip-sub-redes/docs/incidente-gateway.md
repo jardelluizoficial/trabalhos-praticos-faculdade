@@ -1,5 +1,7 @@
 # Incidente com gateway incorreto no PC0
 
+[← Laboratório de duas sub-redes](../README.md) · [Todos os trabalhos](../../../README.md) · [Perfil](https://github.com/jardelluizoficial)
+
 ## Sintoma e alteração controlada
 
 Na cópia do laboratório, alterei somente o gateway do PC0 para 192.168.1.254. Mantive IP 192.168.1.2 e máscara 255.255.255.0. O gateway correto era 192.168.1.1. O endereço .254 não correspondia a um roteador nesta simulação.
@@ -39,3 +41,7 @@ A captura 20 preserva no início o histórico de um teste remoto com falha. Os d
 ## Conclusão do diagnóstico
 
 O gateway incorreto impediu a entrega a destinos remotos neste cenário. A comunicação local não dependia dele. A comparação antes e depois da correção confirmou a causa e a recuperação, sem alterar os endereços IP dos PCs.
+
+---
+
+[← Voltar ao laboratório](../README.md) · [Evidências](evidencias.md) · [Roteiro](roteiro-pratico.md) · [Incidente](incidente-gateway.md)

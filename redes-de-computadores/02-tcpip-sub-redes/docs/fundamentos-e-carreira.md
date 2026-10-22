@@ -1,5 +1,7 @@
 # Fundamentos de redes para Suporte e evolução em cloud
 
+[← Laboratório de duas sub-redes](../README.md) · [Todos os trabalhos](../../../README.md) · [Perfil](https://github.com/jardelluizoficial)
+
 Este laboratório desenvolve a habilidade de observar uma configuração, prever o caminho de um pacote e conferir a previsão por meio de testes. Isso ajuda a explicar um incidente e escolher a próxima verificação.
 
 ## Conceitos usados na montagem
@@ -61,3 +63,7 @@ Ter conectividade e ter autorização são questões diferentes. ICMP respondend
 5. Como um gateway incorreto pode preservar comunicação local e impedir a remota nesta topologia.
 6. Qual evidência diferencia uma hipótese de uma conclusão.
 7. Qual regra de endereçamento muda quando o cenário passa para Azure.
+
+---
+
+[← Voltar ao laboratório](../README.md) · [Evidências](evidencias.md) · [Roteiro](roteiro-pratico.md) · [Incidente](incidente-gateway.md)

@@ -1,11 +1,15 @@
 # Conectividade entre duas sub-redes com TCP/IP
 
+[← Trabalhos da faculdade](../../README.md) · [Perfil](https://github.com/jardelluizoficial)
+
 Laboratório acadêmico realizado no Cisco Packet Tracer na disciplina de Redes de Computadores, do curso de Computação em Nuvem da Anhanguera.
 
 **Aluno:** Jardel Luiz  
 **Unidade 2:** Modelo de Referência ISO/OSI e Arquitetura TCP/IP  
 **Aula 2:** Arquitetura TCP/IP  
 **Data da prática:** 20/10/2026
+
+**Nesta página:** [Resumo](#objetivo-e-resultado) · [Endereçamento](#endereçamento-e-conexões) · [Testes](#testes-de-conectividade) · [Incidente](#incidente-de-gateway) · [Arquivos](#arquivos-e-evidências)
 
 ## Objetivo e resultado
 
@@ -104,3 +108,7 @@ A conectividade por ping não comprova funcionamento de todas as aplicações ne
 - [Cisco sobre ping e traceroute](https://www.cisco.com/c/en/us/support/docs/ios-nx-os-software/ios-software-releases-121-mainline/12778-ping-traceroute.html)
 - [Cisco IOS sobre interfaces e rotas conectadas](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipaddr/command/ipaddr-cr-book/ipaddr-r1.html)
 - [Cisco Networking Academy sobre a tabela ARP](https://contenthub.netacad.com/courses/itn-dl/_common/9.2.9-packet-tracer---examine-the-arp-table_es-XL.pdf)
+
+---
+
+[← Anterior: rede local](../01-lan-packet-tracer/README.md) · [Voltar ao índice da faculdade](../../README.md)

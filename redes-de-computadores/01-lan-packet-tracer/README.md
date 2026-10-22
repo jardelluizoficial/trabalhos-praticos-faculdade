@@ -1,10 +1,14 @@
 # Rede local com dois computadores e um switch
 
+[← Trabalhos da faculdade](../../README.md) · [Perfil](https://github.com/jardelluizoficial)
+
 Laboratório acadêmico realizado no Cisco Packet Tracer durante a disciplina de Redes de Computadores, do curso de Computação em Nuvem da Anhanguera.
 
 **Unidade:** Fundamentos de Redes de Computadores  
 **Aula:** Hardware e Cabeamento  
 **Data da prática:** 20/10/2026
+
+**Nesta página:** [Objetivo](#objetivo) · [Configuração](#endereçamento-e-conexões) · [Evidências](#imagens-do-laboratório) · [Resultado](#resultado-do-teste)
 
 ## Objetivo
 
@@ -92,3 +96,7 @@ Nesta prática, exercitei a montagem de uma topologia em estrela, a configuraç�
 Também compreendi melhor a função do switch na comunicação local e a importância de utilizar endereços IP diferentes dentro da mesma sub-rede.
 
 Caso a comunicação falhasse, começaria conferindo os cabos, as portas utilizadas e as configurações de IP e máscara.
+
+---
+
+[← Voltar ao índice da faculdade](../../README.md) · [Próximo: duas sub-redes com TCP/IP →](../02-tcpip-sub-redes/README.md)
