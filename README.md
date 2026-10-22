@@ -27,3 +27,5 @@ Cada laboratório tem seu próprio README com a explicação principal e uma pas
 ## Continue explorando
 
 As práticas da [Cisco Networking Academy](https://github.com/jardelluizoficial/cisco-networking-labs) ficam em um repositório próprio. Os exercícios com Windows e Active Directory estão nos [laboratórios práticos de suporte](https://github.com/jardelluizoficial/laboratorios-praticos-de-suporte).
+
+Para comparar com o incidente de gateway do Packet Tracer, veja o [diagnóstico de DNS no Windows](https://github.com/jardelluizoficial/laboratorios-praticos-de-suporte/tree/main/diagnostico-dns): o servidor responde por IP, mas a consulta de nome falha quando o cliente utiliza um DNS incorreto.
