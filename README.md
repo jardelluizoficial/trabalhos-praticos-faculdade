@@ -2,7 +2,7 @@
 
 Atividades da graduação em **Computação em Nuvem — Anhanguera**, documentadas por Jardel Luiz. Cada prática reúne o objetivo, o ambiente, os procedimentos e os resultados observados.
 
-[Perfil](https://github.com/jardelluizoficial) · [Suporte N1](https://github.com/jardelluizoficial/laboratorio-suporte-n1) · [Cisco](https://github.com/jardelluizoficial/cisco-networking-labs) · **Faculdade**
+[Perfil](https://github.com/jardelluizoficial) · [Suporte](https://github.com/jardelluizoficial/laboratorio-suporte-n1) · [Cisco](https://github.com/jardelluizoficial/cisco-networking-labs) · **Faculdade**
 
 ## Redes de Computadores
 
@@ -26,4 +26,4 @@ Cada laboratório tem seu próprio README com a explicação principal e uma pas
 
 ## Continue explorando
 
-As práticas da [Cisco Networking Academy](https://github.com/jardelluizoficial/cisco-networking-labs) ficam em um repositório próprio. Os exercícios com Windows e Active Directory estão nos [laboratórios de Suporte N1](https://github.com/jardelluizoficial/laboratorio-suporte-n1).
+As práticas da [Cisco Networking Academy](https://github.com/jardelluizoficial/cisco-networking-labs) ficam em um repositório próprio. Os exercícios com Windows e Active Directory estão nos [laboratórios práticos de suporte](https://github.com/jardelluizoficial/laboratorio-suporte-n1).
