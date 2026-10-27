@@ -1,0 +1,9 @@
+data,origem,destino,ipv6_destino,sub_rede,comando,enviados,recebidos,perdidos,perda_percentual,evidencia
+2026-10-26,PC0,PC1,2001:DB8:1::3,local,ping 2001:DB8:1::3,4,4,0,0,../imagens/03-ping-pc0.png
+2026-10-26,PC0,PC2,2001:DB8:2::2,remota,ping 2001:DB8:2::2,4,4,0,0,../imagens/03-ping-pc0.png
+2026-10-26,PC1,PC0,2001:DB8:1::2,local,ping 2001:DB8:1::2,4,4,0,0,../imagens/04-ping-pc1.png
+2026-10-26,PC1,PC3,2001:DB8:2::3,remota,ping 2001:DB8:2::3,4,4,0,0,../imagens/04-ping-pc1.png
+2026-10-26,PC2,PC3,2001:DB8:2::3,local,ping 2001:DB8:2::3,4,4,0,0,../imagens/05-ping-pc2.png
+2026-10-26,PC2,PC0,2001:DB8:1::2,remota,ping 2001:DB8:1::2,4,4,0,0,../imagens/05-ping-pc2.png
+2026-10-26,PC3,PC2,2001:DB8:2::2,local,ping 2001:DB8:2::2,4,4,0,0,../imagens/06-ping-pc3.png
+2026-10-26,PC3,PC1,2001:DB8:1::3,remota,ping 2001:DB8:1::3,4,4,0,0,../imagens/06-ping-pc3.png

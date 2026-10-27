@@ -111,4 +111,4 @@ A conectividade por ping não comprova funcionamento de todas as aplicações ne
 
 ---
 
-[← Anterior: rede local](../01-lan-packet-tracer/README.md) · [Voltar ao índice da faculdade](../../README.md)
+[← Anterior: rede local](../01-lan-packet-tracer/README.md) · [Voltar ao índice da faculdade](../../README.md) · [Próximo: duas sub-redes com IPv6 →](../03-ipv6-duas-sub-redes/README.md)

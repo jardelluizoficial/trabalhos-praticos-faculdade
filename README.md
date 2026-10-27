@@ -6,12 +6,13 @@ Atividades da graduação em **Computação em Nuvem — Anhanguera**, documenta
 
 ## Redes de Computadores
 
-Os laboratórios abaixo foram realizados no **Cisco Packet Tracer**. A sequência vai da comunicação dentro de uma rede local à comunicação entre duas sub-redes.
+Os laboratórios abaixo foram realizados no **Cisco Packet Tracer**. A sequência vai da comunicação dentro de uma rede local à comunicação entre sub-redes com IPv4 e IPv6.
 
 | Laboratório | O que foi praticado | Resultado documentado |
 | --- | --- | --- |
 | **[01 · Rede local com dois PCs e um switch](redes-de-computadores/01-lan-packet-tracer/README.md)** | Cabeamento, IPv4, máscara de sub-rede e teste com ping. | Quatro respostas, sem perda de pacotes. |
 | **[02 · Duas sub-redes com TCP/IP](redes-de-computadores/02-tcpip-sub-redes/README.md)** | Interfaces do roteador, gateway, rotas conectadas, ARP e ICMP. | 16 testes finais sem perdas e um incidente de gateway corrigido. |
+| **[03 · Duas sub-redes com IPv6](redes-de-computadores/03-ipv6-duas-sub-redes/README.md)** | Endereçamento /64, gateway, ativação de interfaces e roteamento IPv6. | Oito testes nos quatro PCs, com 32 respostas e 0% de perda. |
 
 ## Escolha o ponto de partida
 
@@ -20,9 +21,11 @@ Os laboratórios abaixo foram realizados no **Cisco Packet Tracer**. A sequênci
 - **Reprodução da prática:** consulte o [roteiro das duas sub-redes](redes-de-computadores/02-tcpip-sub-redes/docs/roteiro-pratico.md) e abra a [base funcional `.pkt`](redes-de-computadores/02-tcpip-sub-redes/topologia/u2-a2-tcpip-02-base-validada.pkt) no Packet Tracer.
 - **Conferência dos resultados:** acesse a [matriz de testes](redes-de-computadores/02-tcpip-sub-redes/resultados/testes-conectividade.csv) e o [índice de evidências](redes-de-computadores/02-tcpip-sub-redes/docs/evidencias.md).
 
+- **Prática com IPv6:** veja o [laboratório de duas sub-redes /64](redes-de-computadores/03-ipv6-duas-sub-redes/README.md), com [simulação `.pkt`](redes-de-computadores/03-ipv6-duas-sub-redes/topologia/rede-ipv6.pkt) e testes locais e entre redes.
+
 ## Como os registros estão organizados
 
-Cada laboratório tem seu próprio README com a explicação principal e uma pasta `imagens/` com as capturas. A prática de duas sub-redes também contém `docs/` para os detalhes, `topologia/` para os arquivos do simulador e `resultados/` para os testes.
+Cada laboratório tem seu próprio README com a explicação principal e uma pasta `imagens/` com as capturas. As práticas de duas sub-redes também contêm `docs/` para os detalhes, `topologia/` para os arquivos do simulador e `resultados/` para os testes.
 
 ## Continue explorando
 
