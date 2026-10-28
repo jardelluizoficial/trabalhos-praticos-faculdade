@@ -1,0 +1,4 @@
+origem,ip_origem,destino,ip_destino,solicitacoes,respostas,perda_percentual,tempos_observados,evidencia
+PC0,192.168.1.2,Server0,192.168.1.100,4,4,0,todas as respostas abaixo de 1 ms,../imagens/07-pc0-ping-servidor.png
+PC1,192.168.1.3,Server0,192.168.1.100,4,4,0,todas as respostas abaixo de 1 ms,../imagens/09-pc1-ping-servidor.png
+PC2,192.168.1.4,Server0,192.168.1.100,4,4,0,primeira resposta 3 ms e demais abaixo de 1 ms,../imagens/10-pc2-ping-servidor.png

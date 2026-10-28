@@ -111,4 +111,4 @@ Esses fundamentos ajudam no diagnóstico inicial de conectividade em suporte e n
 
 ---
 
-[← Anterior: duas sub-redes com TCP/IP](../02-tcpip-sub-redes/README.md) · [Voltar ao índice da faculdade](../../README.md)
+[← Anterior: duas sub-redes com TCP/IP](../02-tcpip-sub-redes/README.md) · [Voltar ao índice da faculdade](../../README.md) · [Próximo: gerência de desempenho →](../04-gerencia-desempenho/README.md)

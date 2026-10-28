@@ -1,0 +1,16 @@
+indicador,valor,unidade,natureza,observacao,evidencia
+icmp_rtt_simulacao,7,ms,calculado,intervalo de 0.000 a 0.007 s,../imagens/11-simulacao-icmp-pc2-servidor.png
+http_intervalo,12,ms,calculado,primeiro evento HTTP local 0.011 ate resposta 0.023 s,../imagens/14-simulacao-http-resposta.png
+http_content_length,62,bytes,observado,corpo da resposta HTTP,../imagens/16-http-tamanho-conteudo.png
+ip_total_length_resposta,183,bytes,observado,pacote IP completo,../imagens/15-http-detalhes-pacote-ip.png
+http_goodput_estimado,41333.333333,bit/s,estimado,62 vezes 8 dividido por 0.012 s sem representar vazao maxima,../imagens/16-http-tamanho-conteudo.png
+fa04_capacidade_nominal,100000000,bit/s,observado,full-duplex up/up,../imagens/19-switch-fa04-estatisticas-completas.png
+fa04_pacotes_entrada,956,pacotes,acumulado,contadores nao zerados,../imagens/19-switch-fa04-estatisticas-completas.png
+fa04_bytes_entrada,193351,bytes,acumulado,contadores nao zerados,../imagens/19-switch-fa04-estatisticas-completas.png
+fa04_pacotes_saida,2357,pacotes,acumulado,contadores nao zerados,../imagens/19-switch-fa04-estatisticas-completas.png
+fa04_bytes_saida,263570,bytes,acumulado,contadores nao zerados,../imagens/19-switch-fa04-estatisticas-completas.png
+fa04_erros_entrada,0,erros,acumulado,leitura no instante da captura,../imagens/19-switch-fa04-estatisticas-completas.png
+fa04_erros_saida,0,erros,acumulado,leitura no instante da captura,../imagens/19-switch-fa04-estatisticas-completas.png
+fa04_colisoes,0,colisoes,acumulado,leitura no instante da captura,../imagens/19-switch-fa04-estatisticas-completas.png
+fa04_reinicializacoes,10,eventos,acumulado,causa nao investigada,../imagens/19-switch-fa04-estatisticas-completas.png
+fa04_utilizacao_total,,percentual,nao_medido,faltam duas leituras em intervalo controlado,../imagens/19-switch-fa04-estatisticas-completas.png
