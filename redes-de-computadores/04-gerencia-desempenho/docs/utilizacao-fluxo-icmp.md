@@ -44,7 +44,7 @@ Taxa média IP = 3.084 × 8 ÷ 3 s = 8.224 bit/s
 Parcela da capacidade = 8.224 ÷ 100.000.000 × 100 = 0,008224%
 ```
 
-O mesmo cálculo se aplica às três respostas. O intervalo de 3 s é a janela de observação, não a soma dos tempos de ida e volta.
+O mesmo cálculo se aplica às três respostas. Os tempos de ida e volta dos três ciclos foram **10, 10 e 7 ms**, respectivamente. A variação foi observada sem determinar sua causa. O intervalo de 3 s é a janela de observação, não a soma desses tempos. O ICMP simples de 7 ms e os pings em Realtime pertencem a outros testes.
 
 ## O que o resultado permite concluir
 

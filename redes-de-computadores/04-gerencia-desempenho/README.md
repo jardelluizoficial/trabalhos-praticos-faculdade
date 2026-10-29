@@ -106,6 +106,16 @@ Para estimar a contribuição de um fluxo à utilização, configurei um ping pe
 
 Essa é a **utilização estimada referente aos bytes IP deste fluxo**, analisada separadamente em cada direção do enlace full-duplex. Não inclui o custo Ethernet, intervalos entre quadros ou outros tráfegos; portanto, não representa a ocupação física total da porta. O [método, as fórmulas e os tamanhos das PDUs](docs/utilizacao-fluxo-icmp.md) permitem conferir o cálculo.
 
+## Resumo dos indicadores
+
+| Indicador | Resultado observado e alcance |
+| --- | --- |
+| Utilização estimada | **0,008224% da capacidade de 100 Mb/s por sentido**, considerando somente os bytes IP do fluxo ICMP periódico. |
+| Tráfego observado | ICMP e HTTP entre PCs e servidor. No teste periódico: **3 solicitações e 3 respostas em 3 s**, totalizando **3.084 bytes IP por sentido**. |
+| Taxa útil HTTP — goodput | **41,3 kbit/s**, estimados a partir de 62 bytes de conteúdo no intervalo de 12 ms. |
+
+Os resultados pertencem a testes distintos. A utilização estimada não representa a ocupação total Ethernet, e a taxa útil HTTP não representa a vazão máxima da rede.
+
 ## Diagnóstico e limites
 
 Em uma tentativa anterior, surgiram eventos TCP sem HTTP. A inspeção mostrou um segmento RST+ACK com sequência antiga, descartado como duplicado. Após reabrir o navegador, fazer uma única solicitação e acompanhar a simulação, registrei a resposta HTTP. A captura não permite afirmar que a causa era congestionamento ou falha física. Veja o [registro do diagnóstico](imagens/12-diagnostico-tcp-descarte.png).

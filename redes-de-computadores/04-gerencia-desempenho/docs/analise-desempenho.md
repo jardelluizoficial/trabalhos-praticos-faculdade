@@ -10,6 +10,8 @@ PC0 e PC1 apresentaram respostas abaixo de 1 ms. No PC2, a primeira foi de 3 ms 
 
 Na [captura ICMP do modo Simulation](../imagens/11-simulacao-icmp-pc2-servidor.png), o retorno ocorreu em `0,007 s`, a partir de `0,000 s`: **7 ms de ida e volta**. As cinco linhas representam etapas do intercâmbio PC2 → switch → servidor → switch → PC2.
 
+No [experimento periódico](utilizacao-fluxo-icmp.md), os três ciclos apresentaram **10, 10 e 7 ms de ida e volta**. Essa variação foi observada sem determinar sua causa. Os resultados desse experimento, do ICMP simples e dos pings em Realtime são mantidos separados.
+
 ## Intervalo HTTP e taxa útil
 
 Na [lista de eventos](../imagens/14-simulacao-http-resposta.png), o primeiro evento HTTP local do PC2 ocorre em `0,011 s`; a resposta HTTP chega ao PC2 em `0,023 s`. O intervalo adotado é:
@@ -74,6 +76,16 @@ A [tabela MAC](../imagens/20-switch-tabela-mac.png) mostrou entradas dinâmicas 
 Antes da captura bem-sucedida, houve tentativas em que apareceram eventos TCP sem HTTP. Na [inspeção da camada 4](../imagens/12-diagnostico-tcp-descarte.png), o Server0 recebeu do PC2 um segmento RST+ACK com número de sequência antigo e o descartou como duplicado. A captura documenta esse comportamento, mas não estabelece sua causa inicial.
 
 Depois de reabrir o navegador, solicitar a página uma única vez e avançar os eventos, a resposta HTTP foi observada. Não há evidência suficiente para classificar a ocorrência como congestionamento ou problema de cabo.
+
+## Resumo dos indicadores
+
+| Indicador | Resultado observado e alcance |
+| --- | --- |
+| Utilização estimada | **0,008224% da capacidade de 100 Mb/s por sentido**, considerando somente os bytes IP do fluxo ICMP periódico. |
+| Tráfego observado | ICMP e HTTP entre PCs e servidor. No teste periódico: **3 solicitações e 3 respostas em 3 s**, totalizando **3.084 bytes IP por sentido**. |
+| Taxa útil HTTP — goodput | **41,3 kbit/s**, estimados a partir de 62 bytes de conteúdo no intervalo de 12 ms. |
+
+Os resultados pertencem a testes distintos. A utilização estimada não representa a ocupação total Ethernet, e a taxa útil HTTP não representa a vazão máxima da rede.
 
 ## Limites e conclusão
 
