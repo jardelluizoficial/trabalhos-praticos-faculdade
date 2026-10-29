@@ -54,9 +54,18 @@ taxa por direção (bit/s) = diferença de bytes × 8 ÷ intervalo em segundos
 utilização por direção (%) = taxa medida ÷ capacidade do enlace × 100
 ```
 
-Os contadores publicados são uma leitura acumulada, sem zeragem e sem segunda leitura em intervalo controlado. Portanto, **a utilização total não foi medida de forma confiável**. A relação entre a taxa do corpo HTTP e 100 Mb/s ignoraria o restante do tráfego e não representaria a utilização total da porta.
+### Verificação dos contadores
 
-Na leitura, as médias de cinco minutos apareceram como zero, apesar de 956 pacotes/193.351 bytes recebidos e 2.357 pacotes/263.570 bytes enviados. Os erros de entrada, saída e colisões foram zero. Dez reinicializações da interface estavam registradas, sem investigação de causa; não devem ser omitidas nem interpretadas como falhas atuais comprovadas.
+Comparei a [leitura inicial](../imagens/23-switch-fa04-leitura-inicial.png) com a [leitura final](../imagens/24-switch-fa04-leitura-final.png), após novos acessos ao arquivo HTTP pelo PC1. Os números exibidos não acompanharam o tráfego gerado:
+
+| Leitura | Horário após a leitura | Pacotes de entrada | Bytes de entrada | Pacotes de saída | Bytes de saída |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Inicial | 02:13:10.194 | 956 | 193.351 | 2.357 | 263.570 |
+| Final | 02:15:50.438 | 956 | 193.351 | 2.357 | 263.570 |
+
+Os horários são os retornados por `show clock` após a consulta, não o instante exato de amostragem. A diferença de bytes exibida foi zero, mas isso **não comprova ausência de tráfego ou utilização de 0%**. Os contadores não foram considerados uma medição dinâmica confiável nesta execução. As médias de cinco minutos, erros e colisões apareceram como zero; as dez reinicializações também são valores exibidos, sem causa estabelecida no experimento.
+
+Como método complementar, contei pacotes em uma janela de simulação e conferi seus tamanhos. Três pacotes IP de 1.028 bytes em 3 s resultam em **8.224 bit/s por sentido**, correspondentes a **0,008224% de 100 Mb/s**. Essa estimativa representa somente os bytes IP do fluxo ICMP; a utilização física total do enlace continua fora do alcance da coleta. Consulte o [experimento periódico completo](utilizacao-fluxo-icmp.md).
 
 A [tabela MAC](../imagens/20-switch-tabela-mac.png) mostrou entradas dinâmicas na VLAN 1: roteador `0000.0c7a.7701` em Gi0/1, PC2 `0004.9a6d.8143` em Fa0/3 e servidor `00e0.8fcd.c25e` em Fa0/4.
 
@@ -68,4 +77,4 @@ Depois de reabrir o navegador, solicitar a página uma única vez e avançar os 
 
 ## Limites e conclusão
 
-Os testes comprovaram conectividade local e recebimento de conteúdo HTTP. Não avaliaram DNS, segurança, roteamento entre sub-redes ou saturação. Tempos de Realtime e Simulation foram mantidos como observações separadas. A análise distingue resultados medidos, valores acumulados e cálculos derivados, sem transformar limitações da coleta em resultados inventados.
+Os testes comprovaram conectividade local e recebimento de conteúdo HTTP, incluindo o [arquivo helloworld.html no PC1](../imagens/22-pc1-arquivo-http-recebido.png). O experimento periódico acrescentou uma estimativa verificável da contribuição de um fluxo à utilização, considerando seus bytes IP por direção. Não avaliaram DNS, segurança, roteamento entre sub-redes ou saturação. Tempos de Realtime e Simulation foram mantidos como observações separadas. A análise distingue eventos observados, valores exibidos pela CLI e cálculos derivados, sem transformar limitações da coleta em resultados inventados.

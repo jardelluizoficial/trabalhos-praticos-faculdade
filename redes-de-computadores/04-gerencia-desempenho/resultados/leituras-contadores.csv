@@ -1,0 +1,3 @@
+leitura,horario_apos_leitura,entrada_pacotes,entrada_bytes,saida_pacotes,saida_bytes,observacao
+inicial,02:13:10.194,956,193351,2357,263570,horario posterior nao e instante exato da amostragem
+final,02:15:50.438,956,193351,2357,263570,contadores iguais apos acessos HTTP; nao interpretar como utilizacao zero

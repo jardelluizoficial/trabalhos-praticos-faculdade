@@ -43,7 +43,7 @@ Em cada PC e no servidor, use `Desktop > IP Configuration > Static`. Configure P
 1. No servidor, abra `Services > HTTP` e confira `On` e a presença de `helloworld.html`.
 2. Em cada PC, abra `Desktop > Command Prompt` e execute `ping 192.168.1.100`.
 3. Registre solicitações, respostas, perdas e tempos. Se houver falha, confira endereços, máscara, cabeamento e estado das portas antes de concluir a causa.
-4. No PC1, abra `Desktop > Web Browser`, digite `http://192.168.1.100` e pressione `Go` uma vez. Confira o recebimento da página.
+4. No PC1, abra `Desktop > Web Browser`, digite `http://192.168.1.100` e pressione `Go` uma vez. Confira o recebimento da página. Depois acesse `http://192.168.1.100/helloworld.html` no PC1 e registre o conteúdo “Hello, world!”, como na [captura 22](../imagens/22-pc1-arquivo-http-recebido.png).
 
 ## ICMP no modo Simulation
 
@@ -76,6 +76,17 @@ show mac address-table
 
 Pressione Espaço se aparecer `--More--`. Registre estado, velocidade, duplex, pacotes, bytes, erros e colisões. A tabela MAC relaciona o servidor `00e0.8fcd.c25e` à Fa0/4 na captura original.
 
-Consulte a [análise](analise-desempenho.md) para distinguir contadores acumulados de taxas. Para uma futura medição de utilização, faça duas leituras em intervalo conhecido e calcule a diferença de bytes por direção; essa coleta adicional não faz parte dos resultados publicados.
+Consulte a [comparação das duas leituras](analise-desempenho.md#verificação-dos-contadores). Nesta execução, os contadores permaneceram iguais após novos acessos HTTP e não foram usados para calcular utilização. Em uma coleta por contadores, é necessário verificar que eles acompanham o tráfego e registrar um intervalo conhecido antes de calcular a diferença de bytes por direção.
 
 Salve o projeto `.pkt` e mantenha as imagens com nomes numerados. O [índice de evidências](evidencias.md) mostra os registros desta execução.
+
+## Experimento complementar com ping periódico
+
+1. Em `Simulation`, remova a PDU simples anterior e configure `Add Complex PDU` no PC2. Use aplicação `PING`, destino `192.168.1.100`, origem `192.168.1.4`, TTL `32`, TOS `0`, Sequence Number `1` e Size `1000`.
+2. Marque `Periodic`, informe intervalo `1` segundo e crie a PDU. Mantenha somente essa PDU periódica na lista.
+3. Prepare a captura com `Reset Simulation`, filtros ARP e ICMP e `Constant Delay` desmarcado.
+4. Avance com `Capture/Forward` até **3.000 s**, que significa três segundos. Não confunda com `0.003 s`, equivalente a três milissegundos.
+5. Registre os três ciclos completos com envio em 0, 1 e 2 s. Exclua o início do quarto ciclo em 3 s da janela `0 ≤ t < 3 s`.
+6. Abra um evento no Server0 e confira `Inbound PDU Details` e `Outbound PDU Details`. Registre o Total Length do pacote IP recebido e da resposta enviada: na coleta, ambos são 1028 bytes.
+7. Calcule volume e taxa por sentido usando os pacotes que atravessam a porta do servidor, sem contar cada linha de encaminhamento como um novo pacote. Compare a taxa IP com 100 Mb/s e declare a exclusão do custo Ethernet e dos demais tráfegos.
+8. Salve um arquivo separado, preservando a primeira simulação. A [versão complementar](../topologia/rede-gerencia-desempenho-complemento.pkt), o [método detalhado](utilizacao-fluxo-icmp.md) e as capturas 25 a 28 registram este experimento.

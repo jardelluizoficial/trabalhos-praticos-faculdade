@@ -1,0 +1,4 @@
+ciclo,envio_pc2_s,chegada_servidor_s,retorno_pc2_s,ip_bytes_solicitacao,ip_bytes_resposta,janela_inicio_s,janela_fim_exclusivo_s
+1,0.000,0.005,0.010,1028,1028,0,3
+2,1.000,1.005,1.010,1028,1028,0,3
+3,2.000,2.004,2.007,1028,1028,0,3

@@ -5,12 +5,18 @@ http_content_length,62,bytes,observado,corpo da resposta HTTP,../imagens/16-http
 ip_total_length_resposta,183,bytes,observado,pacote IP completo,../imagens/15-http-detalhes-pacote-ip.png
 http_goodput_estimado,41333.333333,bit/s,estimado,62 vezes 8 dividido por 0.012 s sem representar vazao maxima,../imagens/16-http-tamanho-conteudo.png
 fa04_capacidade_nominal,100000000,bit/s,observado,full-duplex up/up,../imagens/19-switch-fa04-estatisticas-completas.png
-fa04_pacotes_entrada,956,pacotes,acumulado,contadores nao zerados,../imagens/19-switch-fa04-estatisticas-completas.png
-fa04_bytes_entrada,193351,bytes,acumulado,contadores nao zerados,../imagens/19-switch-fa04-estatisticas-completas.png
-fa04_pacotes_saida,2357,pacotes,acumulado,contadores nao zerados,../imagens/19-switch-fa04-estatisticas-completas.png
-fa04_bytes_saida,263570,bytes,acumulado,contadores nao zerados,../imagens/19-switch-fa04-estatisticas-completas.png
-fa04_erros_entrada,0,erros,acumulado,leitura no instante da captura,../imagens/19-switch-fa04-estatisticas-completas.png
-fa04_erros_saida,0,erros,acumulado,leitura no instante da captura,../imagens/19-switch-fa04-estatisticas-completas.png
-fa04_colisoes,0,colisoes,acumulado,leitura no instante da captura,../imagens/19-switch-fa04-estatisticas-completas.png
-fa04_reinicializacoes,10,eventos,acumulado,causa nao investigada,../imagens/19-switch-fa04-estatisticas-completas.png
-fa04_utilizacao_total,,percentual,nao_medido,faltam duas leituras em intervalo controlado,../imagens/19-switch-fa04-estatisticas-completas.png
+fa04_pacotes_entrada,956,pacotes,exibido_cli,valores exibidos; contadores sem atualizacao na coleta complementar,../imagens/19-switch-fa04-estatisticas-completas.png
+fa04_bytes_entrada,193351,bytes,exibido_cli,valores exibidos; contadores sem atualizacao na coleta complementar,../imagens/19-switch-fa04-estatisticas-completas.png
+fa04_pacotes_saida,2357,pacotes,exibido_cli,valores exibidos; contadores sem atualizacao na coleta complementar,../imagens/19-switch-fa04-estatisticas-completas.png
+fa04_bytes_saida,263570,bytes,exibido_cli,valores exibidos; contadores sem atualizacao na coleta complementar,../imagens/19-switch-fa04-estatisticas-completas.png
+fa04_erros_entrada,0,erros,exibido_cli,valores exibidos; contadores sem atualizacao na coleta complementar,../imagens/19-switch-fa04-estatisticas-completas.png
+fa04_erros_saida,0,erros,exibido_cli,valores exibidos; contadores sem atualizacao na coleta complementar,../imagens/19-switch-fa04-estatisticas-completas.png
+fa04_colisoes,0,colisoes,exibido_cli,valores exibidos; contadores sem atualizacao na coleta complementar,../imagens/19-switch-fa04-estatisticas-completas.png
+fa04_reinicializacoes,10,eventos,exibido_cli,valores exibidos; contadores sem atualizacao na coleta complementar,../imagens/19-switch-fa04-estatisticas-completas.png
+fa04_utilizacao_total,,percentual,nao_medido,contadores sem atualizacao; estimativa por fluxo IP nao equivale ao total Ethernet,../imagens/24-switch-fa04-leitura-final.png
+icmp_periodico_janela,3,s,definido,janela 0 <= t < 3; quarto ciclo excluido,../imagens/26-eventos-ping-periodico.png
+icmp_periodico_pacotes_por_sentido,3,pacotes,observado,tres solicitacoes e tres respostas; separado por sentido,../imagens/26-eventos-ping-periodico.png
+icmp_periodico_ip_total_length,1028,bytes,observado,mesmo tamanho IP na solicitacao e resposta,../imagens/28-ping-periodico-tamanho-resposta.png
+icmp_periodico_volume_ip_por_sentido,3084,bytes,calculado,3 vezes 1028 bytes,../imagens/26-eventos-ping-periodico.png
+icmp_periodico_taxa_ip_por_sentido,8224,bit/s,calculado,3084 vezes 8 dividido por 3 segundos,../imagens/26-eventos-ping-periodico.png
+icmp_periodico_utilizacao_ip_por_sentido,0.008224,percentual,estimado,somente bytes IP do fluxo; exclui custo Ethernet e outros trafegos,../imagens/26-eventos-ping-periodico.png

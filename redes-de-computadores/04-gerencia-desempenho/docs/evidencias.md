@@ -2,7 +2,7 @@
 
 [← Voltar ao laboratório](../README.md)
 
-As 21 capturas abaixo foram preservadas com os nomes e o conteúdo originais. Os números identificam os arquivos, não a quantidade de testes independentes.
+As 28 capturas abaixo foram preservadas com os nomes e o conteúdo originais. Os números identificam os arquivos, não a quantidade de testes independentes.
 
 | Nº | Captura | O que documenta |
 | --- | --- | --- |
@@ -27,3 +27,10 @@ As 21 capturas abaixo foram preservadas com os nomes e o conteúdo originais. Os
 | 19 | [19-switch-fa04-estatisticas-completas.png](../imagens/19-switch-fa04-estatisticas-completas.png) | Contadores completos, velocidade, duplex e erros da Fa0/4. |
 | 20 | [20-switch-tabela-mac.png](../imagens/20-switch-tabela-mac.png) | Tabela MAC dinâmica com roteador, PC2 e servidor. |
 | 21 | [21-topologia-completa.png](../imagens/21-topologia-completa.png) | Topologia completa com enlaces ativos. |
+| 22 | [22-pc1-arquivo-http-recebido.png](../imagens/22-pc1-arquivo-http-recebido.png) | PC1 recebendo o arquivo helloworld.html por HTTP. |
+| 23 | [23-switch-fa04-leitura-inicial.png](../imagens/23-switch-fa04-leitura-inicial.png) | Leitura inicial dos contadores da Fa0/4 e horário posterior. |
+| 24 | [24-switch-fa04-leitura-final.png](../imagens/24-switch-fa04-leitura-final.png) | Leitura final com os mesmos valores; não comprova tráfego zero. |
+| 25 | [25-configuracao-ping-periodico.png](../imagens/25-configuracao-ping-periodico.png) | PING periódico: Size 1000 e intervalo de 1 segundo. |
+| 26 | [26-eventos-ping-periodico.png](../imagens/26-eventos-ping-periodico.png) | Três ciclos completos no intervalo de 0 até antes de 3 segundos. |
+| 27 | [27-ping-periodico-tamanho-pacote.png](../imagens/27-ping-periodico-tamanho-pacote.png) | Solicitação ICMP recebida: IP Total Length de 1028 bytes. |
+| 28 | [28-ping-periodico-tamanho-resposta.png](../imagens/28-ping-periodico-tamanho-resposta.png) | Resposta ICMP enviada: IP Total Length de 1028 bytes. |

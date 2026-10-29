@@ -72,9 +72,9 @@ Esse valor considera apenas o conteúdo útil no intervalo entre o primeiro even
 
 ![Arquivo helloworld.html recebido pelo PC2 em uma verificação posterior](imagens/17-pc2-pagina-http-recebida.png)
 
-### Contadores da Fa0/4
+### Valores apresentados pela CLI da Fa0/4
 
-| Indicador acumulado | Valor |
+| Indicador exibido | Valor |
 | --- | ---: |
 | Pacotes recebidos | 956 |
 | Bytes recebidos | 193.351 |
@@ -84,9 +84,27 @@ Esse valor considera apenas o conteúdo útil no intervalo entre o primeiro even
 | Colisões | 0 |
 | Reinicializações da interface | 10 |
 
-Os contadores não foram zerados antes da leitura. As médias de cinco minutos apareceram como 0 bit/s, apesar do tráfego registrado. As dez reinicializações são um valor histórico sem causa determinada nesta coleta. Não medi a utilização total da porta por meio de duas leituras com intervalo controlado.
+Os contadores não foram zerados. Na coleta complementar, fiz novos acessos HTTP pelo PC1 e comparei duas leituras: os valores de pacotes e bytes permaneceram iguais. Por isso, esses números não foram tratados como medição dinâmica confiável, e a diferença zero não foi convertida em utilização de 0%. As médias de cinco minutos e as dez reinicializações são valores exibidos pelo simulador, sem causa estabelecida no experimento. Veja as [leituras inicial e final](docs/analise-desempenho.md#verificação-dos-contadores).
 
 As definições, fórmulas e limitações estão na [análise de desempenho](docs/analise-desempenho.md). Os dados também estão em [CSV](resultados/indicadores.csv).
+
+### Experimento complementar: arquivo no PC1 e ICMP periódico
+
+O PC1 também recebeu o arquivo `helloworld.html`, conforme solicitado no roteiro:
+
+![PC1 recebendo o arquivo helloworld.html por HTTP](imagens/22-pc1-arquivo-http-recebido.png)
+
+Para estimar a contribuição de um fluxo à utilização, configurei um ping periódico de PC2 para Server0, com Size 1000 e intervalo de 1 s. A janela **0 ≤ t < 3 s** contém três solicitações e três respostas. Os detalhes das duas direções confirmam **1.028 bytes por pacote IP**.
+
+| Indicador por sentido | Resultado |
+| --- | ---: |
+| Volume IP em 3 s | 3 × 1.028 = 3.084 bytes |
+| Taxa média IP | 3.084 × 8 ÷ 3 = 8.224 bit/s |
+| Parcela da capacidade de 100 Mb/s | **0,008224%** |
+
+![Três ciclos completos de ping e início do quarto ciclo excluído da janela](imagens/26-eventos-ping-periodico.png)
+
+Essa é a **utilização estimada referente aos bytes IP deste fluxo**, analisada separadamente em cada direção do enlace full-duplex. Não inclui o custo Ethernet, intervalos entre quadros ou outros tráfegos; portanto, não representa a ocupação física total da porta. O [método, as fórmulas e os tamanhos das PDUs](docs/utilizacao-fluxo-icmp.md) permitem conferir o cálculo.
 
 ## Diagnóstico e limites
 
@@ -98,14 +116,17 @@ Não realizei testes de saturação, segurança, DNS ou roteamento entre redes. 
 
 ## Arquivos e evidências
 
-- [Simulação salva no Packet Tracer](topologia/rede-gerencia-desempenho.pkt)
+- [Simulação original salva no Packet Tracer](topologia/rede-gerencia-desempenho.pkt)
+- [Simulação complementar com ping periódico](topologia/rede-gerencia-desempenho-complemento.pkt)
 - [Roteiro para repetir a prática](docs/roteiro-pratico.md)
-- [Índice das 21 capturas](docs/evidencias.md)
+- [Índice das 28 capturas](docs/evidencias.md)
 - [Análise e cálculos](docs/analise-desempenho.md)
 - [Resultados dos testes de conectividade](resultados/testes-conectividade.csv)
 - [Indicadores observados e calculados](resultados/indicadores.csv)
+- [Tempos e tamanhos dos três ciclos periódicos](resultados/ping-periodico.csv)
+- [Comparação das leituras da CLI](resultados/leituras-contadores.csv)
 
-As capturas e o arquivo `.pkt` foram preservados como enviados. O relatório acadêmico em Word e o roteiro original da instituição ficam fora desta pasta pública.
+As 28 capturas e os dois arquivos `.pkt` foram preservados como enviados. O relatório acadêmico em Word e o roteiro original da instituição ficam fora desta pasta pública.
 
 ## Aprendizados
 
