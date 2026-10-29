@@ -15,13 +15,13 @@ Laboratório acadêmico realizado no Cisco Packet Tracer, na disciplina de Redes
 
 Configurei uma rede local IPv4 com três PCs e um servidor HTTP. Testei a conectividade, acompanhei o percurso de ICMP e HTTP no modo Simulation e consultei os contadores da porta do servidor no switch.
 
-Os três testes de ping tiveram **12 respostas para 12 solicitações e 0% de perda**. O servidor entregou páginas pelo navegador. Em uma captura de simulação, o intercâmbio ICMP levou 7 ms; a resposta HTTP de 62 bytes úteis foi observada em um intervalo definido de 12 ms.
+PC0, PC1 e PC2 obtiveram quatro respostas **Reply from** cada, do servidor `192.168.1.100`: **12 respostas para 12 solicitações e 0% de perda**. O servidor entregou páginas pelo navegador. Em uma captura de simulação, o intercâmbio ICMP levou 7 ms; a resposta HTTP de 62 bytes úteis foi observada em um intervalo definido de 12 ms.
 
 ![Topologia com roteador, switch, três computadores e servidor, com enlaces ativos](imagens/21-topologia-completa.png)
 
 ## Ambiente utilizado
 
-- Cisco Packet Tracer em Windows.
+- Cisco Packet Tracer 9.0.1, 64 bits (build 9.0.1.858), instalado em Windows.
 - Router0: Cisco 1941.
 - Switch0: Cisco 2960-24TT.
 - PC0, PC1 e PC2: PC-PT; Server0: Server-PT.
